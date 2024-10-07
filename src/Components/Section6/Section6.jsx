@@ -20,21 +20,21 @@ export default function Section6() {
           type="text"
           id="small-input"
           placeholder="Name"
-          class="block mt-5 w-[70%] mx-auto lg:mx-0 lg:w-1/3 rounded-full p-2 text-gray-900 border border-gray-300  bg-[#CEDCFF] text-xs  focus:border-black "
+          className="block mt-5 w-[70%] mx-auto lg:mx-0 lg:w-1/3 rounded-full p-2 text-gray-900 border border-gray-300  bg-[#CEDCFF] text-xs  focus:border-black "
         />
         
         <input
           type="text"
           id="small-input"
           placeholder="Phone Number"
-          class="block mt-3 w-[70%] mx-auto lg:mx-0  lg:w-1/3 rounded-full p-2 text-gray-900 border border-gray-300  bg-[#CEDCFF] text-xs  focus:border-black "
+          className="block mt-3 w-[70%] mx-auto lg:mx-0  lg:w-1/3 rounded-full p-2 text-gray-900 border border-gray-300  bg-[#CEDCFF] text-xs  focus:border-black "
         />
         
         <input
           type="text"
           id="small-input"
           placeholder="Email"
-          class="block my-3 w-[70%] mx-auto lg:mx-0  lg:w-1/3 rounded-full p-2 text-gray-900 border border-gray-300  bg-[#CEDCFF] text-xs  focus:border-black "
+          className="block my-3 w-[70%] mx-auto lg:mx-0  lg:w-1/3 rounded-full p-2 text-gray-900 border border-gray-300  bg-[#CEDCFF] text-xs  focus:border-black "
         />
         <div className="flex justify-center lg:justify-start">
           <button className="text-white py-1 px-10 rounded-md bg-[#0D6EFD] hover:bg-blue-600">
