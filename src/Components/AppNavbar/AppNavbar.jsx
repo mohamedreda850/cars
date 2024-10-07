@@ -12,16 +12,14 @@ export default function AppNavbar() {
   return (
     <nav className="bg-opacity-0 w-full">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        {/* Logo on the left */}
         <a className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src={navImg} className="h-8" alt="Company Logo" />
         </a>
 
-        {/* Toggle button for smaller screens */}
         <button
           onClick={toggleMenu}
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-sticky"
           aria-expanded={isMenuOpen}
         >
@@ -43,61 +41,43 @@ export default function AppNavbar() {
           </svg>
         </button>
 
-        {/* Centered Navigation Links */}
-        <div className="hidden md:flex justify-center flex-grow">
+        <div className="hidden lg:flex justify-center flex-grow">
           <ul className="flex space-x-6 font-medium text-gray-900">
             <li>
-              <Link
-                to="/become-a-renter"
-                className="hover:text-blue-700"
-              >
+              <Link to="/become-a-renter" className="hover:text-blue-700">
                 Become a renter
               </Link>
             </li>
             <li>
-              <Link
-                to="/rental-deals"
-                className="hover:text-blue-700"
-              >
+              <Link to="/rental-deals" className="hover:text-blue-700">
                 Rental deals
               </Link>
             </li>
             <li>
-              <Link
-                to="/how-it-works"
-                className="hover:text-blue-700"
-              >
+              <Link to="/how-it-works" className="hover:text-blue-700">
                 How it works
               </Link>
             </li>
             <li>
-              <Link
-                to="/why-choose-us"
-                className="hover:text-blue-700"
-              >
+              <Link to="/why-choose-us" className="hover:text-blue-700">
                 Why choose us
               </Link>
             </li>
           </ul>
         </div>
 
-        {/* Sign in / Sign up buttons on the right (visible on larger screens) */}
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="hidden lg:flex items-center space-x-4">
           <button className="text-sm font-normal text-black">Sign in</button>
           <button className="text-white bg-[#0D6EFD] hover:bg-[#0D459D] font-medium rounded-lg text-sm px-5 py-2.5">
             Sign up
           </button>
         </div>
 
-        {/* Collapsible menu for smaller screens */}
         <div
-          className={`${
-            isMenuOpen ? "block" : "hidden"
-          } w-full md:hidden mt-4`}
+          className={`${isMenuOpen ? "block" : "hidden"} w-full lg:hidden mt-4`}
           id="navbar-sticky"
         >
-          <ul className="flex flex-col justify-around w-full p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            {/* Navigation Links */}
+          <ul className="flex flex-col justify-around w-full p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 md:border-0 lg:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
               <Link
                 to="/become-a-renter"
@@ -131,7 +111,6 @@ export default function AppNavbar() {
               </Link>
             </li>
 
-            {/* Sign in / Sign up buttons inside the toggle menu for smaller screens */}
             <li>
               <button className="block w-full text-left py-2 px-3 text-gray-900 rounded hover:bg-gray-100">
                 Sign in

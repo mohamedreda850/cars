@@ -13,8 +13,8 @@ export default function Section5() {
       <h1 className="text-center mt-10 text-3xl lg:text-4xl font-semibold">
         Most popular cars rental deals
       </h1>
-      <div className="flex mt-10 flex-col lg:flex-row p-4 justify-around">
-        <div className="mb-4 mx-2   rounded-tl-3xl w-full lg:w-[35%]  bg-white  rounded-bl-3xl shadow-md flex flex-col lg:flex-row">
+      <div className="flex mt-10 flex-col xl:flex-row p-4 px-[30%] xl:px-0 justify-around">
+        <div className="mb-4 mx-2   rounded-tl-3xl w-full  xl:w-[35%]  bg-white  rounded-bl-3xl shadow-md flex flex-col xl:flex-row">
           <div className="">
             <img className="w-full h-[100%]" src={manImg} alt="" />
           </div>
@@ -37,7 +37,7 @@ export default function Section5() {
             <h4 className="text-sm text-gray-500">Last updated 3 mins ago</h4>
           </div>
         </div>
-        <div className="mb-4 mx-2  rounded-tl-3xl w-full lg:w-[35%] bg-white rounded-bl-3xl shadow-md flex flex-col lg:flex-row">
+        <div className="mb-4 mx-2  rounded-tl-3xl w-full xl:w-[35%] bg-white rounded-bl-3xl shadow-md flex flex-col xl:flex-row">
           <div className="">
             <img className="w-full" src={girlImg} alt="" />
           </div>
