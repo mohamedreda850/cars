@@ -20,20 +20,18 @@ export default function Section2() {
   const navigate = useNavigate();
   const [carDetails, setCarDetails] = useState([]);
   const [searchQuery, setSearchQuery] = useState("")
-  async function getCardetails(query = "") {
+  async function getCardetails() {
     try {
       const { data } = await axios.get(
-    `https://freetestapi.com/api/v1/cars?limit=4&search=${query}`
+    `https://myfakeapi.com/api/cars/`
       );
-
-      setCarDetails(data);
+      
+      setCarDetails(data.cars.splice(0, 4));
     } catch (error) {
       console.log(error);
     }
   }
-  function handleSeach(){
-    getCardetails(searchQuery)
-  }
+
   function navigateToDetails() {
     navigate("/details");
   }
@@ -60,13 +58,13 @@ export default function Section2() {
             id="search-dropdown"
             className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg rounded-s-gray-100 rounded-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
             placeholder="Search by name"
-            onChange={(e)=>setSearchQuery(e.target.value)}
+            
             required
           />
           <button
             type="submit"
             className="absolute top-0 end-0 p-2.5 h-full text-sm font-medium text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          onClick={handleSeach}
+          
           >
             Search
           </button>
@@ -97,7 +95,7 @@ export default function Section2() {
                 alt=""
               />
               <h5 className="text-xl font-medium mt-5">
-                {car.make} {car.model}
+                {car.car} {car.car_model}
               </h5>
               <p className="text-sm font-medium  mt-1 ">
                 <img src={star} className="inline pb-1" alt="" /> 4.6{" "}
@@ -113,7 +111,7 @@ export default function Section2() {
                     Passanger
                   </p>
                   <p className="mt-1 text-sm text-gray-500">
-                    <i className="fa-solid fa-calendar-days "></i> {car.year}
+                    <i className="fa-solid fa-calendar-days "></i> {car.car_model_year}
                   </p>
                 </div>
 
@@ -121,7 +119,7 @@ export default function Section2() {
                   {" "}
                   <p className="mt-1 text-sm text-gray-500">
                     <img className="inline pb-1" src={frame} alt="" />
-                    {car.transmission}
+                    manual
                   </p>{" "}
                   <p className="mt-1 text-sm text-gray-500">
                     <img className="inline pb-1" src={ice} alt="" />
@@ -135,7 +133,7 @@ export default function Section2() {
                 <h1 className="text-gray-500">Price</h1>
                 <h1 className="">
                   {" "}
-                  ${car.price} <span className="text-gray-500"> /day</span>
+                  {car.price} <span className="text-gray-500"> /day</span>
                 </h1>
               </div>
               <button
